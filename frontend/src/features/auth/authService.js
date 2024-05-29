@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-// const MAIN_URL = "http://localhost:3001"
-const API_URL = "http://localhost:3001/api/users"
+const API_URL = "https://assist-desk.vercel.app/api/users"
 // axios.defaults.withCredentials = true;
 //Register user
 const register = async (userData) => {

@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 4000
 // console.log("ENVPATH",env.config({path: "./.env"}))
  app.use(cors(
      {
-         origin: ["http://localhost:3000"],
+         origin: ["https://assist-desk-app.vercel.app"],
          methods: ["POST", "GET", "PUT", "DELETE"],
          credentials: true
      }
