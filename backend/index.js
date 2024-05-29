@@ -15,13 +15,13 @@ connectDB()
 const app = express()
 const PORT = process.env.PORT || 8000
 
-app.use(cors(
-    {
-        origin: ["https://assist-desk-app.vercel.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-));
+// app.use(cors(
+//     {
+//         origin: ["https://assist-desk-app.vercel.app"],
+//         methods: ["POST", "GET", "PUT", "DELETE"],
+//         credentials: true
+//     }
+// ));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))

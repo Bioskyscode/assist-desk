@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/tickets/"
+const API_URL = "https://assist-desk.vercel.app/api/tickets/"
 
 const createTicket = async (ticketData, token) => {
     const config = {
