@@ -3,14 +3,14 @@ import userRoutes from './routes/userRoutes.js';
 import ticketRoutes from './routes/ticketRoutes.js';
 import { errorHandler } from './middleware/errorMiddleware.js';
 import 'colors';
-import connectDB from './config/db.js';
 import env from 'dotenv';
+import connectDB from './config/db.js';
 
-env.config({path: "./.env"});
-
+env.config({path: "backend/.env"});
+//env.config({path: "./.env"});
 
 //Connect to database
- connectDB()
+connectDB()
 
 const app = express()
 const PORT = process.env.PORT || 8000
