@@ -5,23 +5,24 @@ import { errorHandler } from './middleware/errorMiddleware.js';
 import 'colors';
 import env from 'dotenv';
 import connectDB from './config/db.js';
+import cors from 'cors'
 
-env.config({path: "backend/.env"});
-//env.config({path: "./.env"});
+// env.config({path: "backend/.env"});
+env.config({path: "./.env"});
 
 //Connect to database
 connectDB()
 
 const app = express()
-const PORT = process.env.PORT || 8000
-
-// app.use(cors(
-//     {
-//         origin: ["https://assist-desk-app.vercel.app"],
-//         methods: ["POST", "GET", "PUT", "DELETE"],
-//         credentials: true
-//     }
-// ));
+const PORT = process.env.PORT || 4000
+// console.log("ENVPATH",env.config({path: "./.env"}))
+ app.use(cors(
+     {
+         origin: ["http://localhost:3000"],
+         methods: ["POST", "GET", "PUT", "DELETE"],
+         credentials: true
+     }
+ ));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
