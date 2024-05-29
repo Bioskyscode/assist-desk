@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
-    res.json({ message: "Assist desk" })
+    res.send("Assist-desk server is running")
 })
 
 //Route
