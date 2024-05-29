@@ -2,11 +2,11 @@
   "name": "assist-desk",
   "version": "1.0.0",
   "description": "Support ticket app",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "pm2 start backend/server.js --watch",
+    "start": "node backend/index.js",
+    "server": "pm2 start backend/index.js --watch",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },

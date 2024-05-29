@@ -33,7 +33,7 @@ function Ticket() {
         }
 
         if (isSuccess) {
-            dispatch(reset())
+            // dispatch(reset())
             dispatch(notesReset()) //
         }
 
